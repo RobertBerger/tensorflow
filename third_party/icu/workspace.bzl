@@ -16,6 +16,13 @@ def clean_dep(dep):
 # sha256sum: 86b85fbf1b251d7a658de86ce5a0c8f34151027cc60b01e1b76f167379acf181
 #
 # Let's try with the first one, since the checksum is the old one, before I started hacking things
+# Please note, that the first line down there is most likely irrelevant, but bazel wants is:
+#
+# | ERROR: Analysis of target '//tensorflow/tools/pip_package:build_pip_package' failed; build aborted:
+#          no such package '@icu//': tf_http_archive(urls) must have redundant URLs.
+#          The mirror.bazel.build URL must be present and it must come first.
+#          Even if you don't have permission to mirror the file, please put the correctly formatted mirror URL there anyway,
+#          because someone will come along shortly thereafter and mirror the file.
 #
 def repo():
     third_party_http_archive(
